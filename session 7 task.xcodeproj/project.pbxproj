@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0BAAC341EBA303B00794928 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BAAC331EBA303B00794928 /* EventsViewController.m */; };
+		D0BAAC371EBA306300794928 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BAAC361EBA306300794928 /* ContactUsViewController.m */; };
+		D0BAAC3A1EBA308600794928 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BAAC391EBA308600794928 /* AboutUsViewController.m */; };
+		D0BAAC3D1EBA30C200794928 /* FaceBookPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BAAC3C1EBA30C200794928 /* FaceBookPageViewController.m */; };
+		D0BAAC401EBA30E400794928 /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BAAC3F1EBA30E400794928 /* TwitterViewController.m */; };
 		FAFF19F51EB92A5A00D12ECE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF19F41EB92A5A00D12ECE /* main.m */; };
 		FAFF19F81EB92A5A00D12ECE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF19F71EB92A5A00D12ECE /* AppDelegate.m */; };
 		FAFF19FB1EB92A5A00D12ECE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF19FA1EB92A5A00D12ECE /* ViewController.m */; };
@@ -39,6 +44,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0BAAC321EBA303B00794928 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		D0BAAC331EBA303B00794928 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		D0BAAC351EBA306300794928 /* ContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
+		D0BAAC361EBA306300794928 /* ContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
+		D0BAAC381EBA308600794928 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		D0BAAC391EBA308600794928 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		D0BAAC3B1EBA30C200794928 /* FaceBookPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceBookPageViewController.h; sourceTree = "<group>"; };
+		D0BAAC3C1EBA30C200794928 /* FaceBookPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceBookPageViewController.m; sourceTree = "<group>"; };
+		D0BAAC3E1EBA30E400794928 /* TwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewController.h; sourceTree = "<group>"; };
+		D0BAAC3F1EBA30E400794928 /* TwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewController.m; sourceTree = "<group>"; };
 		FAFF19F01EB92A5A00D12ECE /* session 7 task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "session 7 task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFF19F41EB92A5A00D12ECE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FAFF19F61EB92A5A00D12ECE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -90,6 +105,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0BAAC311EBA2FE400794928 /* rear */ = {
+			isa = PBXGroup;
+			children = (
+				FAFF1A321EB9448F00D12ECE /* RearTableViewController.h */,
+				FAFF1A331EB9448F00D12ECE /* RearTableViewController.m */,
+			);
+			name = rear;
+			sourceTree = "<group>";
+		};
+		D0BAAC411EBA30F200794928 /* events */ = {
+			isa = PBXGroup;
+			children = (
+				D0BAAC321EBA303B00794928 /* EventsViewController.h */,
+				D0BAAC331EBA303B00794928 /* EventsViewController.m */,
+			);
+			name = events;
+			sourceTree = "<group>";
+		};
+		D0BAAC421EBA310400794928 /* contactUs */ = {
+			isa = PBXGroup;
+			children = (
+				D0BAAC351EBA306300794928 /* ContactUsViewController.h */,
+				D0BAAC361EBA306300794928 /* ContactUsViewController.m */,
+			);
+			name = contactUs;
+			sourceTree = "<group>";
+		};
+		D0BAAC431EBA311300794928 /* AboutUs */ = {
+			isa = PBXGroup;
+			children = (
+				D0BAAC381EBA308600794928 /* AboutUsViewController.h */,
+				D0BAAC391EBA308600794928 /* AboutUsViewController.m */,
+			);
+			name = AboutUs;
+			sourceTree = "<group>";
+		};
+		D0BAAC441EBA312200794928 /* facebook */ = {
+			isa = PBXGroup;
+			children = (
+				D0BAAC3B1EBA30C200794928 /* FaceBookPageViewController.h */,
+				D0BAAC3C1EBA30C200794928 /* FaceBookPageViewController.m */,
+			);
+			name = facebook;
+			sourceTree = "<group>";
+		};
+		D0BAAC451EBA312A00794928 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				D0BAAC3E1EBA30E400794928 /* TwitterViewController.h */,
+				D0BAAC3F1EBA30E400794928 /* TwitterViewController.m */,
+			);
+			name = Twitter;
+			sourceTree = "<group>";
+		};
 		FAFF19E71EB92A5A00D12ECE = {
 			isa = PBXGroup;
 			children = (
@@ -128,8 +197,12 @@
 				FAFF1A2A1EB92A9C00D12ECE /* SecondeViewController.m */,
 				FAFF1A2C1EB92F2300D12ECE /* SWRevealViewController.h */,
 				FAFF1A2D1EB92F2300D12ECE /* SWRevealViewController.m */,
-				FAFF1A321EB9448F00D12ECE /* RearTableViewController.h */,
-				FAFF1A331EB9448F00D12ECE /* RearTableViewController.m */,
+				D0BAAC311EBA2FE400794928 /* rear */,
+				D0BAAC411EBA30F200794928 /* events */,
+				D0BAAC421EBA310400794928 /* contactUs */,
+				D0BAAC431EBA311300794928 /* AboutUs */,
+				D0BAAC441EBA312200794928 /* facebook */,
+				D0BAAC451EBA312A00794928 /* Twitter */,
 			);
 			path = "session 7 task";
 			sourceTree = "<group>";
@@ -293,11 +366,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0BAAC3A1EBA308600794928 /* AboutUsViewController.m in Sources */,
 				FAFF1A2B1EB92A9C00D12ECE /* SecondeViewController.m in Sources */,
 				FAFF19FB1EB92A5A00D12ECE /* ViewController.m in Sources */,
 				FAFF19F81EB92A5A00D12ECE /* AppDelegate.m in Sources */,
+				D0BAAC401EBA30E400794928 /* TwitterViewController.m in Sources */,
+				D0BAAC3D1EBA30C200794928 /* FaceBookPageViewController.m in Sources */,
+				D0BAAC371EBA306300794928 /* ContactUsViewController.m in Sources */,
 				FAFF19F51EB92A5A00D12ECE /* main.m in Sources */,
 				FAFF1A341EB9448F00D12ECE /* RearTableViewController.m in Sources */,
+				D0BAAC341EBA303B00794928 /* EventsViewController.m in Sources */,
 				FAFF1A281EB92A7C00D12ECE /* FirstViewController.m in Sources */,
 				FAFF1A2E1EB92F2300D12ECE /* SWRevealViewController.m in Sources */,
 			);
