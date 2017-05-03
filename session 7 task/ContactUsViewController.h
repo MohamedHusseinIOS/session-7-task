@@ -10,4 +10,6 @@
 
 @interface ContactUsViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
+
 @end

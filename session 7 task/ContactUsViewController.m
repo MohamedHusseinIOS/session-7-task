@@ -7,7 +7,7 @@
 //
 
 #import "ContactUsViewController.h"
-
+#import "SWRevealViewController.h"
 @interface ContactUsViewController ()
 
 @end
@@ -17,11 +17,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self customSetup];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) customSetup{
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if (revealViewController) {
+        [self.sideBarButton setTarget:revealViewController];
+        [self.sideBarButton setAction:@selector(revealToggle:)];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
 }
 
 /*

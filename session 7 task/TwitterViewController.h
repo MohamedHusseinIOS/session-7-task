@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TwitterViewController : UIViewController
+@interface TwitterViewController : UIViewController<UIWebViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UIWebView *TwitterWebView;
+
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @end

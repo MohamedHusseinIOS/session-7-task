@@ -12,6 +12,7 @@
 		D0BAAC3A1EBA308600794928 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BAAC391EBA308600794928 /* AboutUsViewController.m */; };
 		D0BAAC3D1EBA30C200794928 /* FaceBookPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BAAC3C1EBA30C200794928 /* FaceBookPageViewController.m */; };
 		D0BAAC401EBA30E400794928 /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BAAC3F1EBA30E400794928 /* TwitterViewController.m */; };
+		D0BAAC481EBA5AB700794928 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BAAC471EBA5AB700794928 /* MBProgressHUD.m */; };
 		FAFF19F51EB92A5A00D12ECE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF19F41EB92A5A00D12ECE /* main.m */; };
 		FAFF19F81EB92A5A00D12ECE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF19F71EB92A5A00D12ECE /* AppDelegate.m */; };
 		FAFF19FB1EB92A5A00D12ECE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF19FA1EB92A5A00D12ECE /* ViewController.m */; };
@@ -54,6 +55,8 @@
 		D0BAAC3C1EBA30C200794928 /* FaceBookPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceBookPageViewController.m; sourceTree = "<group>"; };
 		D0BAAC3E1EBA30E400794928 /* TwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewController.h; sourceTree = "<group>"; };
 		D0BAAC3F1EBA30E400794928 /* TwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewController.m; sourceTree = "<group>"; };
+		D0BAAC461EBA5AB700794928 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		D0BAAC471EBA5AB700794928 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		FAFF19F01EB92A5A00D12ECE /* session 7 task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "session 7 task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFF19F41EB92A5A00D12ECE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FAFF19F61EB92A5A00D12ECE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,6 +162,15 @@
 			name = Twitter;
 			sourceTree = "<group>";
 		};
+		D0BAAC491EBA5AC400794928 /* MPLoader */ = {
+			isa = PBXGroup;
+			children = (
+				D0BAAC461EBA5AB700794928 /* MBProgressHUD.h */,
+				D0BAAC471EBA5AB700794928 /* MBProgressHUD.m */,
+			);
+			name = MPLoader;
+			sourceTree = "<group>";
+		};
 		FAFF19E71EB92A5A00D12ECE = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +209,7 @@
 				FAFF1A2A1EB92A9C00D12ECE /* SecondeViewController.m */,
 				FAFF1A2C1EB92F2300D12ECE /* SWRevealViewController.h */,
 				FAFF1A2D1EB92F2300D12ECE /* SWRevealViewController.m */,
+				D0BAAC491EBA5AC400794928 /* MPLoader */,
 				D0BAAC311EBA2FE400794928 /* rear */,
 				D0BAAC411EBA30F200794928 /* events */,
 				D0BAAC421EBA310400794928 /* contactUs */,
@@ -375,6 +388,7 @@
 				D0BAAC371EBA306300794928 /* ContactUsViewController.m in Sources */,
 				FAFF19F51EB92A5A00D12ECE /* main.m in Sources */,
 				FAFF1A341EB9448F00D12ECE /* RearTableViewController.m in Sources */,
+				D0BAAC481EBA5AB700794928 /* MBProgressHUD.m in Sources */,
 				D0BAAC341EBA303B00794928 /* EventsViewController.m in Sources */,
 				FAFF1A281EB92A7C00D12ECE /* FirstViewController.m in Sources */,
 				FAFF1A2E1EB92F2300D12ECE /* SWRevealViewController.m in Sources */,

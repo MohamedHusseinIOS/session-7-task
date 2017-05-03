@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FaceBookPageViewController : UIViewController
+@interface FaceBookPageViewController : UIViewController<UIWebViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UIWebView *facebookWebView;
+
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 
 @end
