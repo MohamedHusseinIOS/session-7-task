@@ -15,6 +15,10 @@
 		FAFF1A031EB92A5A00D12ECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFF1A011EB92A5A00D12ECE /* LaunchScreen.storyboard */; };
 		FAFF1A0E1EB92A5B00D12ECE /* session_7_taskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF1A0D1EB92A5B00D12ECE /* session_7_taskTests.m */; };
 		FAFF1A191EB92A5B00D12ECE /* session_7_taskUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF1A181EB92A5B00D12ECE /* session_7_taskUITests.m */; };
+		FAFF1A281EB92A7C00D12ECE /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF1A271EB92A7C00D12ECE /* FirstViewController.m */; };
+		FAFF1A2B1EB92A9C00D12ECE /* SecondeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF1A2A1EB92A9C00D12ECE /* SecondeViewController.m */; };
+		FAFF1A2E1EB92F2300D12ECE /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF1A2D1EB92F2300D12ECE /* SWRevealViewController.m */; };
+		FAFF1A341EB9448F00D12ECE /* RearTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF1A331EB9448F00D12ECE /* RearTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		FAFF1A141EB92A5B00D12ECE /* session 7 taskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "session 7 taskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFF1A181EB92A5B00D12ECE /* session_7_taskUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = session_7_taskUITests.m; sourceTree = "<group>"; };
 		FAFF1A1A1EB92A5B00D12ECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAFF1A261EB92A7C00D12ECE /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		FAFF1A271EB92A7C00D12ECE /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		FAFF1A291EB92A9C00D12ECE /* SecondeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondeViewController.h; sourceTree = "<group>"; };
+		FAFF1A2A1EB92A9C00D12ECE /* SecondeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondeViewController.m; sourceTree = "<group>"; };
+		FAFF1A2C1EB92F2300D12ECE /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		FAFF1A2D1EB92F2300D12ECE /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		FAFF1A321EB9448F00D12ECE /* RearTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RearTableViewController.h; sourceTree = "<group>"; };
+		FAFF1A331EB9448F00D12ECE /* RearTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RearTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +122,14 @@
 				FAFF1A011EB92A5A00D12ECE /* LaunchScreen.storyboard */,
 				FAFF1A041EB92A5A00D12ECE /* Info.plist */,
 				FAFF19F31EB92A5A00D12ECE /* Supporting Files */,
+				FAFF1A261EB92A7C00D12ECE /* FirstViewController.h */,
+				FAFF1A271EB92A7C00D12ECE /* FirstViewController.m */,
+				FAFF1A291EB92A9C00D12ECE /* SecondeViewController.h */,
+				FAFF1A2A1EB92A9C00D12ECE /* SecondeViewController.m */,
+				FAFF1A2C1EB92F2300D12ECE /* SWRevealViewController.h */,
+				FAFF1A2D1EB92F2300D12ECE /* SWRevealViewController.m */,
+				FAFF1A321EB9448F00D12ECE /* RearTableViewController.h */,
+				FAFF1A331EB9448F00D12ECE /* RearTableViewController.m */,
 			);
 			path = "session 7 task";
 			sourceTree = "<group>";
@@ -273,9 +293,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAFF1A2B1EB92A9C00D12ECE /* SecondeViewController.m in Sources */,
 				FAFF19FB1EB92A5A00D12ECE /* ViewController.m in Sources */,
 				FAFF19F81EB92A5A00D12ECE /* AppDelegate.m in Sources */,
 				FAFF19F51EB92A5A00D12ECE /* main.m in Sources */,
+				FAFF1A341EB9448F00D12ECE /* RearTableViewController.m in Sources */,
+				FAFF1A281EB92A7C00D12ECE /* FirstViewController.m in Sources */,
+				FAFF1A2E1EB92F2300D12ECE /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +533,7 @@
 				FAFF1A1F1EB92A5B00D12ECE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAFF1A201EB92A5B00D12ECE /* Build configuration list for PBXNativeTarget "session 7 taskTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +542,7 @@
 				FAFF1A221EB92A5B00D12ECE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAFF1A231EB92A5B00D12ECE /* Build configuration list for PBXNativeTarget "session 7 taskUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +551,7 @@
 				FAFF1A251EB92A5B00D12ECE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
