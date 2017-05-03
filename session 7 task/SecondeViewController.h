@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SecondeViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+@property (strong, nonatomic) IBOutlet UITableView *myTable;
 
 @end

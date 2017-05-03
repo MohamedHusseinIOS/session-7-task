@@ -10,4 +10,9 @@
 
 @interface RearTableViewController : UITableViewController <UITableViewDataSource,UITableViewDelegate>
 
+
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
+
+
+
 @end

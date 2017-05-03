@@ -21,13 +21,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _myTableView.delegate=self;
+    _myTableView.dataSource=self;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    menuItems = @[@"Logo_image",@"News",@"Events",@"About_Us",@"Contact_Us",@"FaceBook_Page",@"Twitter",@"extend"];
+    menuItems = @[@"header",@"News",@"Events",@"About_Us",@"Contact_Us",@"FaceBook_Page",@"Twitter",@"footer"];
     
 }
 
@@ -41,7 +43,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return 1;
+    return 3;
 }
 //-----------------
 
@@ -61,11 +63,16 @@
     
     UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:CellIndentifier forIndexPath:indexPath ];
     
-   
+    
+    
         return cell;
  
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    return 44;
+}
 //---------------
 
 /*

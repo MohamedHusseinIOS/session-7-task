@@ -21,6 +21,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.myTable setDelegate:self];
+    _myTable.dataSource=self;
+    
     menuItems = @[@"News",@"Events",@"About_Us",@"Contact_Us",@"FaceBook_Page",@"Twitter"];
 }
 
@@ -58,6 +62,11 @@
 }
 
 //---------------
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 49;
+}
 /*
 #pragma mark - Navigation
 
