@@ -26,6 +26,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [self customizeNavigation];
+}
+//--------------------
 -(void) customSetup{
     SWRevealViewController *revealViewController = self.revealViewController;
     if (revealViewController) {
@@ -35,6 +39,19 @@
     }
 
 
+}
+//--------------------
+-(void) customizeNavigation{
+
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:1.0/255 green:125.0/255 blue:214.0/255 alpha:1.0];
+    [self.navigationController.navigationBar setTranslucent:NO];
+
+    UIImageView *logoImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo2"]];
+    logoImage.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    logoImage.contentMode = UIViewContentModeScaleAspectFit;
+    self.navigationItem.titleView = logoImage;
+    
+    _sidebarButton.tintColor = [UIColor whiteColor];
 }
 
 /*

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface AboutUsViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *sideBarBurron;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 
 @end

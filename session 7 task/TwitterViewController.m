@@ -33,7 +33,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewDidAppear:(BOOL)animated{
 
+    [self customizeNavigation];
+}
+
+//----------------
 -(void) customSetup{
     SWRevealViewController *revealViewController = self.revealViewController;
     if (revealViewController) {
@@ -61,6 +66,19 @@
 }
 //------timeout------
 
+//--------
+-(void) customizeNavigation{
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:1.0/255 green:125.0/255 blue:214.0/255 alpha:1.0];
+    [self.navigationController.navigationBar setTranslucent:NO];
+    
+    UIImageView *logoImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo2"]];
+    logoImage.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    logoImage.contentMode = UIViewContentModeScaleAspectFit;
+    self.navigationItem.titleView = logoImage;
+    _sidebarButton.tintColor = [UIColor whiteColor];
+}
+
 /*
 #pragma mark - Navigation
 
@@ -71,4 +89,12 @@
 }
 */
 
+- (IBAction)GoToBrowser:(id)sender {
+    
+    if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"https://www.twitter.com/tahrirlounge"]]){
+        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.twitter.com/tahrirlounge"]];
+    }
+    
+}
 @end

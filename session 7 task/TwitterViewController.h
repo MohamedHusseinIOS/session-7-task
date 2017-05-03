@@ -14,4 +14,6 @@
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
+- (IBAction)GoToBrowser:(id)sender;
+
 @end

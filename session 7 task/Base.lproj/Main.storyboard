@@ -342,14 +342,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24g-dO-cgH">
-                                <rect key="frame" x="20" y="115" width="374" height="577"/>
+                                <rect key="frame" x="20" y="125" width="374" height="577"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="577" id="wdS-f1-0eN"/>
                                 </constraints>
                             </webView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twiter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQs-bU-lMO">
-                                <rect key="frame" x="20" y="64" width="130" height="24"/>
+                                <rect key="frame" x="20" y="74" width="130" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="5E1-sT-wkj"/>
                                 </constraints>
@@ -358,14 +358,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWC-gE-5dR">
-                                <rect key="frame" x="258" y="64" width="124" height="30"/>
+                                <rect key="frame" x="258" y="74" width="124" height="30"/>
                                 <color key="backgroundColor" red="0.002557909582" green="0.49178498980000002" blue="0.84015542269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="124" id="5lU-eA-2t0"/>
+                                    <constraint firstAttribute="height" constant="30" id="Oq2-gH-d1p"/>
                                     <constraint firstAttribute="width" constant="124" id="aVH-7r-hjz"/>
                                 </constraints>
                                 <state key="normal" title="GoToBrowser">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="GoToBrowser:" destination="uhC-Af-De7" eventType="touchUpInside" id="wZE-xD-ETH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -374,11 +379,11 @@
                             <constraint firstItem="24g-dO-cgH" firstAttribute="trailing" secondItem="WGx-uY-5hb" secondAttribute="trailingMargin" id="1LV-jW-n52"/>
                             <constraint firstItem="24g-dO-cgH" firstAttribute="leading" secondItem="WGx-uY-5hb" secondAttribute="leadingMargin" id="EEK-Yz-KUM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hWC-gE-5dR" secondAttribute="trailing" constant="12" id="H7f-xm-8yf"/>
-                            <constraint firstItem="24g-dO-cgH" firstAttribute="bottom" secondItem="Z7p-Ml-qrj" secondAttribute="top" id="XN0-ng-wfs"/>
+                            <constraint firstItem="24g-dO-cgH" firstAttribute="top" secondItem="hWC-gE-5dR" secondAttribute="bottom" constant="21" id="UOb-6A-cCo"/>
                             <constraint firstItem="hWC-gE-5dR" firstAttribute="leading" secondItem="NQs-bU-lMO" secondAttribute="trailing" constant="108" id="c9o-Z3-8nD"/>
                             <constraint firstItem="24g-dO-cgH" firstAttribute="top" secondItem="NQs-bU-lMO" secondAttribute="bottom" constant="27" id="ep1-uH-N8V"/>
                             <constraint firstItem="NQs-bU-lMO" firstAttribute="top" secondItem="hWC-gE-5dR" secondAttribute="top" id="j93-QX-Ait"/>
-                            <constraint firstItem="NQs-bU-lMO" firstAttribute="top" secondItem="rt7-Ds-k5o" secondAttribute="bottom" id="yNe-bE-s4m"/>
+                            <constraint firstItem="hWC-gE-5dR" firstAttribute="top" secondItem="rt7-Ds-k5o" secondAttribute="bottom" constant="10" id="uAT-is-5lx"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -407,8 +412,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bsk-hL-pmw">
-                                <rect key="frame" x="0.0" y="233" width="414" height="294"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bsk-hL-pmw">
+                                <rect key="frame" x="0.0" y="233" width="414" height="292"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Contact_Us" focusStyle="custom" rowHeight="44" id="2uj-MF-Lu3">
@@ -448,7 +453,7 @@
                                             <segue destination="YVt-dF-8BM" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="wey-K7-7Tj"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Twitter" rowHeight="44" id="Rt3-ia-K4b">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Twitter" rowHeight="44" id="Rt3-ia-K4b">
                                         <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rt3-ia-K4b" id="Tz4-rq-2nK">
@@ -486,7 +491,7 @@
                                             <segue destination="vsp-mX-aeX" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Reb-LH-Nkn"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="News" rowHeight="44" id="GCP-b3-dIS">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="News" rowHeight="44" id="GCP-b3-dIS">
                                         <rect key="frame" x="0.0" y="116" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GCP-b3-dIS" id="8XH-XS-Std">
@@ -523,7 +528,7 @@
                                             <segue destination="cwT-DO-yU1" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="eXF-hC-eQH"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FaceBook_Page" rowHeight="44" id="t9L-X6-C25">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FaceBook_Page" rowHeight="44" id="t9L-X6-C25">
                                         <rect key="frame" x="0.0" y="160" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t9L-X6-C25" id="sbT-Ew-zte">
@@ -561,7 +566,7 @@
                                             <segue destination="5PQ-sD-sQ7" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="h9s-6m-yWq"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Events" rowHeight="44" id="wfO-NU-elF">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Events" rowHeight="44" id="wfO-NU-elF">
                                         <rect key="frame" x="0.0" y="204" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wfO-NU-elF" id="l0C-sJ-ccu">
@@ -595,7 +600,7 @@
                                             <segue destination="auU-vJ-gtc" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="exF-Vb-XNX"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="About_Us" rowHeight="44" id="gkw-me-cE5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="About_Us" rowHeight="44" id="gkw-me-cE5">
                                         <rect key="frame" x="0.0" y="248" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gkw-me-cE5" id="fot-ls-pHf">
@@ -644,12 +649,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0022332516960000002" green="0.49002140760000001" blue="0.83881998059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bsk-hL-pmw" firstAttribute="top" secondItem="DNs-OJ-lj5" secondAttribute="bottom" constant="68" id="5Ee-ZJ-U4J"/>
                             <constraint firstItem="DNs-OJ-lj5" firstAttribute="leading" secondItem="jIl-gT-ypc" secondAttribute="leadingMargin" constant="15" id="E44-JK-QBV"/>
                             <constraint firstItem="DNs-OJ-lj5" firstAttribute="top" secondItem="t9R-Me-qy8" secondAttribute="bottom" constant="40" id="GLL-dY-a1C"/>
-                            <constraint firstItem="huv-G6-07q" firstAttribute="top" secondItem="bsk-hL-pmw" secondAttribute="bottom" constant="209" id="NIc-07-BiA"/>
-                            <constraint firstItem="bsk-hL-pmw" firstAttribute="leading" secondItem="jIl-gT-ypc" secondAttribute="leading" id="nWf-ue-GGs"/>
-                            <constraint firstAttribute="trailing" secondItem="bsk-hL-pmw" secondAttribute="trailing" id="zSZ-D0-Fqs"/>
+                            <constraint firstItem="bsk-hL-pmw" firstAttribute="leading" secondItem="jIl-gT-ypc" secondAttribute="leading" id="LYc-Xr-Tc7"/>
+                            <constraint firstItem="bsk-hL-pmw" firstAttribute="top" secondItem="DNs-OJ-lj5" secondAttribute="bottom" constant="68" id="UpM-eL-3jf"/>
+                            <constraint firstItem="huv-G6-07q" firstAttribute="top" secondItem="bsk-hL-pmw" secondAttribute="bottom" constant="211" id="cLy-fv-Ofx"/>
+                            <constraint firstAttribute="trailing" secondItem="bsk-hL-pmw" secondAttribute="trailing" id="gm0-nh-Ge7"/>
                         </constraints>
                     </view>
                     <connections>
@@ -796,7 +801,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="sideBarBurron" destination="btf-hX-rhO" id="4H0-b6-P2j"/>
+                        <outlet property="sideBarButton" destination="btf-hX-rhO" id="w1W-Nv-GGG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5fd-MR-nb9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -840,9 +845,13 @@
                                     <constraint firstAttribute="height" constant="34" id="ayq-QG-pJp"/>
                                     <constraint firstAttribute="width" constant="127" id="lfl-gQ-dRM"/>
                                 </constraints>
+                                <color key="tintColor" red="0.0039215686274509803" green="0.49002140760000001" blue="0.83881998059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="GoToBrowser">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="GoToBrowser:" destination="ydu-yN-CI1" eventType="touchUpInside" id="viQ-VN-ZYm"/>
+                                </connections>
                             </button>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slR-RD-Xro">
                                 <rect key="frame" x="0.0" y="150" width="414" height="542"/>
