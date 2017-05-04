@@ -71,9 +71,13 @@
     [self.navigationController.navigationBar setTranslucent:NO];
     
     UIImageView *logoImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo2"]];
-    logoImage.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    logoImage.contentMode = UIViewContentModeScaleAspectFit;
-    self.navigationItem.titleView = logoImage;
+    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 160, 53)];
+    
+    logoImage.frame = titleView.bounds;
+    [titleView addSubview:logoImage];
+    
+    self.navigationItem.titleView = titleView;
+    
     _sideBarButton.tintColor = [UIColor whiteColor];
 }
 
