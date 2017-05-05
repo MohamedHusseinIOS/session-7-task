@@ -8,7 +8,7 @@
 
 #import "EventsViewController.h"
 #import "SWRevealViewController.h"
-
+#import "navigationBarViewController.h"
 @interface EventsViewController ()
 
 @end
@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self customSetup];
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,33 +26,11 @@
     // Dispose of any resources that can be recreated.
 }
 -(void)viewDidAppear:(BOOL)animated{
-    [self customizeNavigation];
-}
-
-//--------------------
--(void) customSetup{
-    SWRevealViewController *revealViewController = self.revealViewController;
-    if (revealViewController) {
-        [self.sideBarButton setTarget:revealViewController];
-        [self.sideBarButton setAction:@selector(revealToggle:)];
-        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-    }
-}
-//--------------
--(void) customizeNavigation{
     
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:1.0/255 green:125.0/255 blue:214.0/255 alpha:1.0];
-    [self.navigationController.navigationBar setTranslucent:NO];
+    navigationBarViewController *navigationBar = [navigationBarViewController new];
     
-    UIImageView *logoImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo2"]];
-    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 160, 53)];
-    
-    logoImage.frame = titleView.bounds;
-    [titleView addSubview:logoImage];
-    
-    self.navigationItem.titleView = titleView;
-    
-    _sideBarButton.tintColor = [UIColor whiteColor];
+    [navigationBar customSetup:_sideBarButton :self];
+    [navigationBar customizeNavigation:_sideBarButton :self];
 }
 
 /*

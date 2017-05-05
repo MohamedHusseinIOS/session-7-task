@@ -1,25 +1,24 @@
 //
-//  AboutUsViewController.m
+//  GalleryViewController.m
 //  session 7 task
 //
-//  Created by GreenRoot on 5/3/17.
+//  Created by GreenRoot on 5/5/17.
 //  Copyright © 2017 GreenRoot. All rights reserved.
 //
 
-#import "AboutUsViewController.h"
+#import "GalleryViewController.h"
 #import "SWRevealViewController.h"
 #import "navigationBarViewController.h"
 
-@interface AboutUsViewController ()
+@interface GalleryViewController ()
 
 @end
 
-@implementation AboutUsViewController
+@implementation GalleryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,10 +31,9 @@
     navigationBarViewController *navigationBar = [navigationBarViewController new];
     
     [navigationBar customSetup:_sideBarButton :self];
+    
     [navigationBar customizeNavigation:_sideBarButton :self];
 }
-
-
 /*
 #pragma mark - Navigation
 

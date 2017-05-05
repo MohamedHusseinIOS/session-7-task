@@ -9,6 +9,7 @@
 #import "TwitterViewController.h"
 #import "SWRevealViewController.h"
 #import "MBProgressHUD.h"
+#import "navigationBarViewController.h"
 
 @interface TwitterViewController ()
 
@@ -22,7 +23,7 @@
     self.TwitterWebView.delegate = self;
     
     // Do any additional setup after loading the view.
-    [self customSetup];
+    
     NSURL *url = [NSURL URLWithString:@"http://twitter.com/tahrirlounge"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [_TwitterWebView loadRequest:request];
@@ -35,20 +36,15 @@
 
 -(void)viewDidAppear:(BOOL)animated{
 
-    [self customizeNavigation];
+    navigationBarViewController *navigationBar = [navigationBarViewController new];
+     
+     [navigationBar customSetup:_sidebarButton :self];
+     [navigationBar customizeNavigation:_sidebarButton :self];
 }
 
 //----------------
--(void) customSetup{
-    SWRevealViewController *revealViewController = self.revealViewController;
-    if (revealViewController) {
-        [self.sidebarButton setTarget:revealViewController];
-        [self.sidebarButton setAction:@selector(revealToggle:)];
-        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-    }
-}
 
-//----------------
+
 -(void)webViewDidStartLoad:(UIWebView *)webView{
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:_TwitterWebView animated:YES];
     hud.label.text=@"Loading";
@@ -67,21 +63,6 @@
 //------timeout------
 
 //--------
--(void) customizeNavigation{
-    
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:1.0/255 green:125.0/255 blue:214.0/255 alpha:1.0];
-    [self.navigationController.navigationBar setTranslucent:NO];
-    
-    UIImageView *logoImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo2"]];
-    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 160, 53)];
-    
-    logoImage.frame = titleView.bounds;
-    [titleView addSubview:logoImage];
-    
-    self.navigationItem.titleView = titleView;
-    
-    _sidebarButton.tintColor = [UIColor whiteColor];
-}
 
 /*
 #pragma mark - Navigation

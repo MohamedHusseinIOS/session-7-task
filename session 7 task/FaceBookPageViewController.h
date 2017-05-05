@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "navigationBarViewController.h"
 
 @interface FaceBookPageViewController : UIViewController<UIWebViewDelegate>
+
 
 @property (strong, nonatomic) IBOutlet UIWebView *facebookWebView;
 
