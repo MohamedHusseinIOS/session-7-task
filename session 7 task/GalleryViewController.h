@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GalleryViewController : UIViewController
+@interface GalleryViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource>{
+    
+    NSInteger OffsetImages;
+
+    NSMutableArray *ImageArray;
+}
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
+@property (strong, nonatomic) IBOutlet UIImageView *bigImageView;
+@property (strong, nonatomic) IBOutlet UIScrollView *BigScrollView;
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionGallery;
+
+-(void)onTimer;
 
 @end
