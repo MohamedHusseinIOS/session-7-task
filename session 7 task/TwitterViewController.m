@@ -37,9 +37,11 @@
 -(void)viewDidAppear:(BOOL)animated{
 
     navigationBarViewController *navigationBar = [navigationBarViewController new];
-     
-     [navigationBar customSetup:_sidebarButton :self];
-     [navigationBar customizeNavigation:_sidebarButton :self];
+    
+    UIColor *navigationBarColorBlue = [UIColor colorWithRed:1.0/255 green:125.0/255 blue:214.0/255 alpha:1.0];
+    
+    [navigationBar customSetup:_sidebarButton :self];
+    [navigationBar customizeNavigation:_sidebarButton :self :navigationBarColorBlue];
 }
 
 //----------------

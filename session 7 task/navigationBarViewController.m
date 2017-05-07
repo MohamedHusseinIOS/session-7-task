@@ -39,9 +39,13 @@
 //-------------this method for customize NB color and but logo in navigation bar----------------------------------
 
 
--(void) customizeNavigation : (UIBarButtonItem*)MenuButton :(UIViewController*)Selfoff{
+-(void) customizeNavigation : (UIBarButtonItem*)MenuButton :(UIViewController*)Selfoff :(UIColor*)navigationBarColor{
     
-    Selfoff.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:1.0/255 green:125.0/255 blue:214.0/255 alpha:1.0];
+    
+    
+    
+    
+    Selfoff.navigationController.navigationBar.barTintColor = navigationBarColor;
     [Selfoff.navigationController.navigationBar setTranslucent:NO];
     
     UIImageView *logoImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo2"]];
@@ -54,7 +58,6 @@
     
     MenuButton.tintColor = [UIColor whiteColor];
 }
-
 /*
 #pragma mark - Navigation
 

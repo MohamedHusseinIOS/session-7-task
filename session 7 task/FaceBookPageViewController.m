@@ -39,8 +39,10 @@
     
     navigationBarViewController *navigationBar = [navigationBarViewController new];
     
+    UIColor *navigationBarColorBlue = [UIColor colorWithRed:1.0/255 green:125.0/255 blue:214.0/255 alpha:1.0];
+    
     [navigationBar customSetup:_sideBarButton :self];
-    [navigationBar customizeNavigation:_sideBarButton :self];
+    [navigationBar customizeNavigation:_sideBarButton :self :navigationBarColorBlue];
 }
 
 //----------------

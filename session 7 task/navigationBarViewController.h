@@ -13,6 +13,6 @@
 
 -(void) customSetup :(UIBarButtonItem*)menuButton :(UIViewController*)Selfoff;
 
--(void) customizeNavigation : (UIBarButtonItem*)MenuButton :(UIViewController*)Selfoff;
+-(void) customizeNavigation : (UIBarButtonItem*)MenuButton :(UIViewController*)Selfoff :(UIColor*)navigationBarColor;
 
 @end
