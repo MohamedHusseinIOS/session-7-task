@@ -57,6 +57,10 @@
     Selfoff.navigationItem.titleView = titleView;
     
     MenuButton.tintColor = [UIColor whiteColor];
+    
+    Selfoff.navigationController.navigationBar.layer.shadowOffset=CGSizeMake(0.0f, 0.0f);
+    Selfoff.navigationController.navigationBar.layer.shadowOpacity=0.8;
+    
 }
 /*
 #pragma mark - Navigation

@@ -59,7 +59,6 @@
     
     [navigationBar customizeNavigation:_sideBarButton :self :navigationBarColorGreen];
     
-    _popupImageView.layer.cornerRadius = 20;
     
     OffsetImages=0; //its for ontimer method to move images
     
@@ -82,9 +81,11 @@
         
         self.bigImageView.frame = CGRectMake(xPostion, 0, self.BigScrollView.frame.size.width, self.BigScrollView.frame.size.height);
         
+        
         [_BigScrollView setContentSize:CGSizeMake(_BigScrollView.frame.size.width * (CGFloat)i+1, _BigScrollView.frame.size.height)];
         
         [_BigScrollView addSubview:_bigImageView];
+        
     }
     
     [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
@@ -98,9 +99,10 @@
     if (OffsetImages == (_BigScrollView.frame.size.width*([ImageArray count]-1))){
         OffsetImages = 0;
         [_BigScrollView setContentOffset:CGPointMake(OffsetImages, 0) animated:NO];
-    }else{
+            }else{
         OffsetImages+=_BigScrollView.frame.size.width;
         [_BigScrollView setContentOffset:CGPointMake(OffsetImages, 0) animated:YES];
+        
     }
     
 }
@@ -126,11 +128,14 @@
     
     imageForCell.contentMode = UIViewContentModeScaleAspectFit;
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdeintifier forIndexPath:indexPath];
+    cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdeintifier forIndexPath:indexPath];
     
     
     
     imageForCell.frame = CGRectMake(0, 0,cell.frame.size.width,cell.frame.size.height);
+    
+    
+    //cell.layer.cornerRadius = 20;
     
     [cell addSubview:imageForCell];
     
@@ -141,8 +146,10 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 
-    [_popupContainerView setHidden:NO];
+    [self showAnimated];
+    //[_popupContainerView setHidden:NO];
     
+     NSString *cellIdeintifier = ImageArray[indexPath.row][0];
     
     _popupImageView =[[UIImageView alloc]initWithImage:[UIImage imageNamed:ImageArray[indexPath.item][1]]];
     
@@ -150,9 +157,16 @@
     
     _popupImageView.frame = CGRectMake(0, 0, _popupContainerView.frame.size.width, _popupContainerView.frame.size.height);
     
+    
+    
+    _popupImageView.backgroundColor = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdeintifier forIndexPath:indexPath].backgroundColor;
+    [_popupContainerView.layer setShadowOffset:CGSizeMake(0.0f,0.0f)];
+    _popupContainerView.layer.shadowOpacity=0.8;
+    
     [_popupContainerView addSubview:_popupImageView];
     [_popupContainerView addSubview:_CloseButton];
     
+    _CloseButton.layer.cornerRadius=10;
     
 }
 
@@ -161,10 +175,35 @@
     return [ImageArray count];
 }
 
+-(void)showAnimated {
+    [_popupContainerView setHidden:NO];
+    self.popupContainerView.transform = CGAffineTransformMakeScale(1.3, 1.3);
+    self.popupContainerView.alpha = 0 ;
+    
+    [UIView animateWithDuration:.25 animations:^{
+        self.popupContainerView.alpha = 1;
+        self.popupContainerView.transform = CGAffineTransformMakeScale(1, 1);
+    }];
+    
+}
+
+-(void)removeAnimated{
+    
+    [UIView animateWithDuration:.25 animations:^{
+        self.popupContainerView.transform = CGAffineTransformMakeScale(1.3, 1.3);
+        self.popupContainerView.alpha = 0;
+    }completion:^(BOOL finished){
+        if(finished){
+            [_popupContainerView setHidden:YES];
+        }
+    }];
+    
+    
+}
 
 - (IBAction)CloseImage:(id)sender {
     
-    [_popupContainerView setHidden:YES];
+    [self removeAnimated];
 }
 
 @end
