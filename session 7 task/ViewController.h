@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "teamMembers.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+{
+    NSMutableArray* teammembersList;
+    
+}
 
+@property (nonatomic)  teamMembers *selectedteamMemberOBJ;
+@property (weak, nonatomic) IBOutlet UITableView *listTeamView;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 
 @end
 

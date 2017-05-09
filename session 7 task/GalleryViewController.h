@@ -14,7 +14,7 @@
 
     NSArray *ImageArray;
     
-    UICollectionViewCell *cell;
+   
 }
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;

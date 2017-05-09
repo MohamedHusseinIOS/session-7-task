@@ -8,6 +8,9 @@
 
 #import "navigationBarViewController.h"
 #import "SWRevealViewController.h"
+#import "UITeamMemberDetail.h"
+#import "SecondeViewController.h"
+
 
 @interface navigationBarViewController ()
 
@@ -39,29 +42,73 @@
 //-------------this method for customize NB color and but logo in navigation bar----------------------------------
 
 
--(void) customizeNavigation : (UIBarButtonItem*)MenuButton :(UIViewController*)Selfoff :(UIColor*)navigationBarColor{
+-(void) customizeNavigation : (UIBarButtonItem*)MenuButton :(UIViewController*)Selfoff :(UIColor*)navigationBarColor :(NSString *)TextForTitle{
     
     
-    
-    
-    
-    Selfoff.navigationController.navigationBar.barTintColor = navigationBarColor;
+    Selfoff.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:41.0/255 green:77.0/255 blue:151.0/255 alpha:1];
     [Selfoff.navigationController.navigationBar setTranslucent:NO];
     
-    UIImageView *logoImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo2"]];
-    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 160, 53)];
+    //UIImageView *logoImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo2"]];
+    //UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 160, 53)];
     
-    logoImage.frame = titleView.bounds;
-    [titleView addSubview:logoImage];
+    //logoImage.frame = titleView.bounds;
+    //[titleView addSubview:logoImage];
     
-    Selfoff.navigationItem.titleView = titleView;
+    UILabel *titleText = [UILabel new];
+    
+    titleText.text = TextForTitle;
+    
+    titleText.textColor = [UIColor whiteColor];
+    titleText.textAlignment = NSTextAlignmentCenter;
+    //titleText.adjustsFontSizeToFitWidth=YES;
+    
+    [titleText setFont:[UIFont boldSystemFontOfSize:26]];
+    
+    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 160 , 53)];
+    
+    
+    titleText.frame = titleView.bounds;
+    [titleView addSubview:titleText];
+    
+    [Selfoff.navigationItem setTitleView: titleView];
+    
+    
+    UIGraphicsBeginImageContext(MenuButton.image.size);
+    [MenuButton.image drawInRect:CGRectMake(0, 10, 30, 30)];
+    MenuButton.image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     
     MenuButton.tintColor = [UIColor whiteColor];
     
     Selfoff.navigationController.navigationBar.layer.shadowOffset=CGSizeMake(0.0f, 0.0f);
     Selfoff.navigationController.navigationBar.layer.shadowOpacity=0.8;
+}
+
+
+
+-(void)childNavigationBarCustom: (UIBarButtonItem*)MenuButton :(UINavigationBar *)navigationBar :(UIColor*)navigationBarColor :(NSString *) TextForTitle{
+    
+    navigationBar.barTintColor= navigationBarColor;
+    
+    UILabel *titleLabel = [UILabel new];
+    
+    titleLabel.text = TextForTitle;
+    
+    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 160, 53)];
+    
+    [titleView addSubview:titleLabel];
+    
+    self.navigationItem.titleView = titleView;
+    
+    MenuButton.tintColor = [UIColor whiteColor];
+    
+    
+    navigationBar.layer.shadowOffset=CGSizeMake(0.0f, 0.0f);
+    navigationBar.layer.shadowOpacity=0.8;
+   
     
 }
+
 /*
 #pragma mark - Navigation
 

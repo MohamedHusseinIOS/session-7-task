@@ -7,9 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import <MapKit/MapKit.h>
 
-@interface ContactUsViewController : UIViewController
+@interface ContactUsViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
+
+
+@property (strong, nonatomic) IBOutlet UITextField *contacttext;
+
+- (IBAction)call:(id)sender;
+
+- (IBAction)sendMail:(id)sender;
+
+- (IBAction)openUrl:(id)sender;
+
+@property (strong, nonatomic) IBOutlet MKMapView *map;
+@property (strong, nonatomic) IBOutlet UIButton *mapbutton;
+@property (strong, nonatomic) IBOutlet UIButton *clockbutton;
 
 @end
